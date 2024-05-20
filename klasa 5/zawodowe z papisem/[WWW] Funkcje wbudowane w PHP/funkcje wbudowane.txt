@@ -1,0 +1,23 @@
+echo i print - wypisanie na stronie tekstu
+var_dump - wypisanie na stonie danych zaawansowane
+isset - czy istnieje taka zmienna
+empty - czy zmienna jest pusta lub rowna 0
+strlen - dlugosc stringa
+strpos - szuka gdzie jest podany tekst w duzym tekscie znakow
+explode i implode - dzieli lub laczy stringi w miejscu podanego znaku
+date - zwraca date
+file_get_contents i file_put_contents - pobiera i zapisuje dane do pliku
+include i require - dolacza inny plik php
+count - policz ile elementow w tablicy
+sort - posortowanie tablicy
+array_push, array_pop - dodanie lub usuniecie ostatniego elementu
+array_merge - polaczenie 2 tabel
+str_replace - zamiana tekstu
+substr - zwraca czesc stringa
+rand - zwraca losowa wartosc
+strtotime - zamienia tskst z data na unix timestamp
+json_encode, json_decode - enkoduje w string i dekoduje ze stringa json 
+trim - usuwa spacje na koncu stringa
+str_repeat - powtarza pewien string x razy
+header - naglowek HTTP
+urlencode, urldecode - zamienia URL na string lub na odwrot

@@ -1,0 +1,14 @@
+baza1
+1. SELECT imie, MiejsceUrodzenia FROM `ludzie` WHERE 1
+2. SELECT DISTINCT imie FROM `ludzie` WHERE 1
+3. SELECT Imie, Nazwisko FROM `ludzie` WHERE Adres LIKE "%Warszawa" OR Adres LIKE "%Wrocław" OR Adres LIKE "%Szczecin"
+4. SELECT Imie, Nazwisko FROM `ludzie` WHERE Imie LIKE "%a"
+5. SELECT Imie, Nazwisko FROM `ludzie` WHERE DataUrodzenia BETWEEN '1947/01/01' AND '1991/01/01'
+6. SELECT Imie, Nazwisko FROM `ludzie` WHERE DataUrodzenia < '1995/01/01'
+7. SELECT Imie, Nazwisko FROM `ludzie` ORDER BY Nazwisko, Imie ASC
+baza2
+1. INSERT INTO `kierowcy` (pesel, imie, nazwisko, adres, miejscowosc, telefon, zarobki, id_pojazdu) VALUES (03258019667, 'Ola', 'Kloch', 'miodowa 8', 'Jozefow', '600257163', 1000, 1)
+2. INSERT INTO `pojazdy` (rejestracja, marka, model) VALUES ('EKU RW03', "ferari", "fabia")
+3. SELECT imie, nazwisko, telefon FROM `kierowcy` WHERE telefon LIKE "5%" OR miejscowosc LIKE "Warszawa"
+4. SELECT imie, nazwisko, CONCAT(adres, miejscowosc) FROM `kierowcy` WHERE zarobki > 5000
+5. SELECT * FROM `pojazdy` WHERE rejestracja LIKE "%7" AND marka LIKE "Mercedes%"

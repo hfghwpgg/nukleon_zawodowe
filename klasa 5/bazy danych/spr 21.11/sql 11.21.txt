@@ -1,0 +1,5 @@
+SELECT p.Imie, p.Nazwisko, p.Miasto FROM `pracownicy` AS p, `stanowiska` AS s WHERE p.Id_stanowisko = s.Id_stanowisko AND s.Nazwa LIKE "ksiegowy" ORDER BY p.Nazwisko ASC;
+SELECT k.tytul FROM `ksiazki` AS k, `wypozyczenia` AS w, `czytelnicy` AS c WHERE k.sygnatura = w.sygnatura AND c.nr_czytelnika = w.Nr_czytelnika AND c.Imie LIKE "Aleksandra" AND c.Nazwisko LIKE "Daniluk" ORDER BY w.Data_wypozyczenia ASC ;
+SELECT k.tytul, k.imie, k.nazwisko, k.rok_wyd FROM `dzialy` AS d, `ksiazki` AS k WHERE k.id_dzial = d.Id_dzial AND d.Nazwa LIKE "Ekonomia";
+SELECT k.tytul, k.nazwisko, k.imie, d.nazwa FROM `ksiazki`AS k, `dzialy` AS d WHERE k.id_dzial = d.id_dzial AND rok_wyd >= 2000;
+SELECT DISTINCT k.tytul, k.imie, k.nazwisko, c.imie, c.nazwisko FROM `ksiazki` AS k, `wypozyczenia` AS w, `czytelnicy` AS c WHERE c.nr_czytelnika = w.nr_czytelnika AND w.data_zwrotu IS NULL ;

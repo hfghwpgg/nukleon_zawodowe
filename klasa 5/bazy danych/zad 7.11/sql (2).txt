@@ -1,0 +1,14 @@
+﻿1. CREATE TABLE szkola (id_ucznia int PRIMARY KEY NOT NULL AUTO_INCREMENT, Imie varchar(255), Nazwisko varchar(255), Data_urodzenia Date, Miejsce_ur varchar(255), Plec varchar(255), Klasa varchar(255))
+2. CREATE TABLE przedmiot(id_przedmiotu int PRIMARY KEY NOT NULL AUTO_INCREMENT, nazwa_przedmiotu varchar(255));
+
+1. INSERT INTO szkola (imie, nazwisko, data_urodzenia, miejsce_ur, plec, klasa) VALUES ("Adam", "Grzywacz", 2004-06-01, "Warszawa", "Mężczyzna", "4b")
+2. INSERT INTO szkola (imie, nazwisko, data_urodzenia, miejsce_ur, plec, klasa) VALUES ("Oskar", "Szostak", '0000-12-24', "Jerozolima", "Mężczyzna", "4b")
+3. DELETE FROM szkola WHERE id_ucznia = 2;
+
+SELECT imie, nazwisko FROM szkola WHERE id_ucznia=1
+SELECT * FROM szkola WHERE nazwisko LIKE "Szostak"
+SELECT * From szkola WHERE 1
+
+UPDATE szkola SET nazwisko = "Skoczek", imie = "Mateusz" WHERE id_ucznia = 1;
+UPDATE szkola SET nazwisko = "Daniel", imie = "Sewiło" WHERE id_ucznia = 1;
+UPDATE szkola SET miejsce_ur = "Otwock" WHERE id_ucznia = 2;

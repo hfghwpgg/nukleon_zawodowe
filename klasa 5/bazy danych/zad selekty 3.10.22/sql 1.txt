@@ -1,0 +1,10 @@
+﻿1. SELECT imie, nazwisko FROM `student` WHERE id_student = 8;
+2. SELECT imie, nazwisko FROM `student` WHERE wojewodztwo LIKE "Małopolskie" ;
+3. SELECT * FROM `student` WHERE rok_studiów = 1;
+4. SELECT * FROM `student` ORDER BY nazwisko ASC;
+5. SELECT imie,nazwisko,miejscowosc FROM `student` WHERE wojewodztwo LIKE "Małopolskie";
+6. SELECT id_student, imie, nazwisko FROM `student` WHERE rok_urodzenia BETWEEN 1997 AND 1999;
+7. SELECT nazwisko FROM `student` ORDER BY rok_urodzenia DESC LIMIT 1;
+8. SELECT imie,nazwisko FROM `student` WHERE status LIKE "urlop"
+9. SELECT * FROM `student` WHERE rok_studiów > 2;
+10. SELECT imie, nazwisko FROM `student` WHERE wojewodztwo NOT LIKE "śląskie";

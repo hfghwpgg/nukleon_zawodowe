@@ -1,0 +1,40 @@
+CREATE TABLE Zespoly (
+    BandID INT PRIMARY KEY,
+    NazwaZespolu VARCHAR(255) NOT NULL,
+    RokZalozenia INT,
+    Opis TEXT,
+    KrajPochodzenia VARCHAR(100)
+);
+
+CREATE TABLE Albumy (
+    AlbumID INT PRIMARY KEY,
+    TytulAlbumu VARCHAR(255) NOT NULL,
+    RokWydania INT,
+    GatunekMuzyczny VARCHAR(100),
+    BandID INT,
+    FOREIGN KEY (BandID) REFERENCES Zespoly(BandID)
+);
+
+CREATE TABLE Utwory (
+    UtworID INT PRIMARY KEY,
+    TytulUtworu VARCHAR(255) NOT NULL,
+    CzasTrwania TIME,
+    AlbumID INT,
+    FOREIGN KEY (AlbumID) REFERENCES Albumy(AlbumID)
+);
+
+CREATE TABLE Koncerty (
+    ConcertID INT PRIMARY KEY,
+    DataKoncertu DATE,
+    MiejsceKoncertu VARCHAR(255),
+    BandID INT,
+    FOREIGN KEY (BandID) REFERENCES Zespoly(BandID)
+);
+
+CREATE TABLE Bilety (
+    TicketID INT PRIMARY KEY,
+    CenaBiletu DECIMAL(10, 2),
+    Dostepnosc BOOLEAN,
+    ConcertID INT,
+    FOREIGN KEY (ConcertID) REFERENCES Koncerty(ConcertID)
+);

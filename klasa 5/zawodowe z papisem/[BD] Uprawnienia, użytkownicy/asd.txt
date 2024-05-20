@@ -1,0 +1,22 @@
+1.
+CREATE USER 'sprzedawca'@'localhost' IDENTIFIED BY 'haslo1';
+CREATE USER 'administrator'@'localhost' IDENTIFIED BY 'haslo2';
+2. 
+CREATE ROLE uprawnienia_sprzedawca;
+CREATE ROLE uprawnienia_administrator;
+3.
+GRANT SELECT ON 'produkty' TO 'uprawnienia_sprzedawca';
+GRANT SELECT, UPDATE ON 'zamowienia' TO 'uprawnienia_sprzedawca';
+GRANT * TO 'uprawnienia_administrator';
+4.
+GRANT 'uprawnienia_sprzedawca' TO 'sprzedawca';
+GRANT 'uprawnienia_administrator' TO 'administator';
+5. 
+REVOKE * ON 'zamowienia' FROM 'administrator';
+GRANT SELECT ON 'zamowienia' TO 'administator';
+6.
+DROP USER 'sprzedawca'@'localhost';
+DROP USER 'administrator'@'localhost'
+7.
+DROP ROLE uprawnienia_sprzedawca;
+DROP ROLE uprawnienia_administrator;

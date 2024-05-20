@@ -1,0 +1,6 @@
+1.
+ a. SELECT DISTINCT czytelnicy.imie, czytelnicy.nazwisko, ksiazki.tytul FROM `wypozyczenia` LEFT JOIN `czytelnicy` ON czytelnicy.Nr_czytelnika = wypozyczenia.Nr_czytelnika LEFT JOIN `ksiazki` ON ksiazki.sygnatura = wypozyczenia.sygnatura WHERE 1;
+ b. SELECT DISTINCT czytelnicy.imie, czytelnicy.nazwisko, ksiazki.tytul FROM `wypozyczenia` RIGHT JOIN `czytelnicy` ON czytelnicy.Nr_czytelnika = wypozyczenia.Nr_czytelnika RIGHT JOIN `ksiazki` ON ksiazki.sygnatura = wypozyczenia.sygnatura WHERE 1
+ c (dodatkowe!!). SELECT DISTINCT czytelnicy.imie, czytelnicy.nazwisko, ksiazki.tytul FROM `wypozyczenia`, `czytelnicy`, `ksiazki` WHERE czytelnicy.Nr_czytelnika = wypozyczenia.Nr_czytelnika AND ksiazki.sygnatura = wypozyczenia.sygnatura;
+2. SELECT pracownicy.Imie, pracownicy.Nazwisko, stanowiska.Nazwa from `pracownicy` LEFT JOIN `stanowiska`ON pracownicy.Id_stanowisko = stanowiska.Id_stanowisko
+3. SELECT ksiazki.Tytul, dzialy.Nazwa FROM `ksiazki` LEFT JOIN `dzialy` ON ksiazki.Id_dzial = dzialy.Id_dzial

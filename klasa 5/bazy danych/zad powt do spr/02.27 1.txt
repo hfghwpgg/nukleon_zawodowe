@@ -1,0 +1,18 @@
+CREATE TABLE SZKOLA(id_ucz INT NOT NULL AUTO_INCREMENT PRIMARY KEY, nazwisko VARCHAR(30) NOT NULL, Imię VARCHAR(30) NOT NULL, PESEL VARCHAR(11) NOT NULL, Adres_ul VARCHAR(30) NOT NULL, adres_nr VARCHAR(5) NOT NULL, Miasto VARCHAR(30) NOT NULL) DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
+
+ALTER TABLE SZKOLA ADD kod VARCHAR(6) NOT NULL;
+
+INSERT INTO SZKOLA (nazwisko, Imię, PESEL, Adres_ul, adres_nr, Miasto) VALUES ("Abracki", "Jan", "41414", "Nocna", "21a", "Gniezno")
+INSERT INTO SZKOLA (nazwisko, Imię, PESEL, Adres_ul, adres_nr, Miasto) VALUES ("Babacki", "Tomasz", "95323", "Gwiezdna", "2", "Gniezno")
+INSERT INTO SZKOLA (nazwisko, Imię, PESEL, Adres_ul, adres_nr, Miasto) VALUES ("Cabacki", "Jerzy", "52366", "Mierna", "13b", "Kutno")
+INSERT INTO SZKOLA (nazwisko, Imię, PESEL, Adres_ul, adres_nr, Miasto) VALUES ("Dabracki", "Tobiasz", "5235233", "Bierna", "3", "Miastko")
+INSERT INTO SZKOLA (nazwisko, Imię, PESEL, Adres_ul, adres_nr, Miasto) VALUES ("Ebacki", "Adrian", "5626262", "Marna", "456", "Mielno")
+
+
+UPDATE SZKOLA SET kod = "62-200" WHERE Miasto LIKE "Gniezno";
+UPDATE SZKOLA SET kod = "99-300" WHERE Miasto LIKE "Kutno";
+UPDATE SZKOLA SET kod = "42-610" WHERE Miasto LIKE "Miastko";
+UPDATE SZKOLA SET kod = "46-032" WHERE Miasto LIKE "Mielno";
+
+CREATE TABLE Dane_uczniow(id_ucznia INT NOT NULL AUTO_INCREMENT PRIMARY KEY, imie_nazwisko VARCHAR(60) NOT NULL, Adres VARCHAR(255)) DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
+INSERT INTO dane_uczniow (id_ucznia, imie_nazwisko, adres) SELECT id_ucz, CONCAT(Imię, ' ', Nazwisko), CONCAT(kod, ' ', Miasto, ' ul.', Adres_ul, ' ', Adres_nr) FROM SZKOLA;

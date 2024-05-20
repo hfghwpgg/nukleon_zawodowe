@@ -1,0 +1,8 @@
+towar - CREATE TABLE `towar` (`id_towaru` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,`opis_towaru` varchar(50) DEFAULT NULL,`cena_zakupu` decimal(10,2) DEFAULT NULL,`cena_sprzedarzy` decimal(10,2) DEFAULT NULL)
+dostawy - CREATE TABLE dostawy(id_dostawy INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, id_towaru INT(11))
+zamowienia - CREATE TABLE zamowienia(id_zamowienia INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, id_klienta INT(11), data_zamowienia DATE, data_realizacji DATE)
+klient - CREATE TABLE klient(id_klienta INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, nazwa VARCHAR(30), miasto VARCHAR(50), ulica VARCHAR(50), kod_pocztowy VARCHAR(10), telefon VARCHAR(50))
+
+ALTER TABLE dostawy ADD CONSTRAINT id_towaru_FK FOREIGN KEY(id_towaru) REFERENCES towar(id_towaru);
+ALTER TABLE dostawy ADD CONSTRAINT id_zamowienia_FK FOREIGN KEY(id_zamowienia) REFERENCES zamowienia(id_zamowienia);
+ALTER TABLE zamowienia ADD CONSTRAINT id_klienta_FK FOREIGN KEY(id_klienta) REFERENCES klient(id_klienta);;

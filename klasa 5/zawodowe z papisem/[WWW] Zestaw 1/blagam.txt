@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ADAM GRZYWACZ 07.09.2023 </title>
+</head>
+<body>
+<?php
+$blagam = "<h1> ADAM GRZYWACZ 07.09.2023 </h1>";
+echo $blagam;
+
+$raz = 2;
+$dwa = 5;
+$wynik = $raz + $dwa;
+echo $wynik, "<br>";
+$wynik = $raz - $dwa;
+echo $wynik, "<br>";
+$wynik = $dwa - $raz;
+echo $wynik, "<br>";
+$wynik = $raz * $dwa;
+echo $wynik, "<br>";
+$wynik = $raz / $dwa;
+echo $wynik, "<br>";
+$wynik = $dwa / $raz;
+echo $wynik, "<br>";
+$wynik = pow($raz, $dwa);
+echo $wynik, "<br>";
+$wynik = pow($dwa, $raz);
+echo $wynik, "<br>";
+
+$b = 69;
+echo $b++, "<br>";
+echo ++$b, "<br>";
+
+$miejscowosc = "Otwock";
+$kraj = "Polska";
+$szerokoscGeograficzna = 52;
+if (
+$szerokoscGeograficzna < 0 || $szerokoscGeograficzna > 180) {
+	$szerokoscGeograficzna = 39;
+};
+$dlugoscGeograficzna = 21;
+if (
+$szerokoscGeograficzna < 0 || $szerokoscGeograficzna > 90) {
+	$szerokoscGeograficzna = 55;
+};
+echo "miejscowosc: $miejscowosc <br>";
+echo "kraj: $kraj <br>";
+echo "szerokoscGeograficzna: $szerokoscGeograficzna <br>";
+echo "dlugoscGeograficzna: $dlugoscGeograficzna <br>";
+
+$a = 10;
+$b = 4;
+if ($a % $b == 0) {
+	echo "TAK<br>";
+    } else {
+    echo "NIE<br>";
+};
+
+$c = 7;
+echo max($a, $b, $c), "<br>";
+
+echo ($a % 2 != 0) ? "$a jest niedodatnia<br>" : "";
+echo ($b % 2 != 0) ? "$b jest niedodatnia<br>" : "";
+echo ($c % 2 != 0) ? "$c jest niedodatnia<br>" : "";
+
+$zad1 = 1;
+$zad2 = 2;
+$zad3 = 3;
+$zad4 = 4;
+$zad5 = 5;
+$zad6 = 5;
+$procenty = 100 * ($zad1 + $zad2 + $zad3 + $zad4 + $zad5 + $zad6) / 20;
+echo "procent: $procenty <br>";
+if ($procenty > 85) {
+	echo 5, "<br>";
+    } else if ($procenty >70)  {
+    echo 4, "<br>";
+    } else if ($procenty > 59) {
+    echo 3, "<br>";
+    } else if ($procenty > 50) {
+    echo 2, "<br>";
+    } else {
+    echo 1, "<br>";
+    };
+    
+$dni_tygodnia = ["poniedzialek" , "wtorek", "sroda", "czwartek", "piatek", "sobota", "niedziela"];
+$input = 1;
+if ($input < 1 || $input > 7) {
+	echo "CWANIAK";
+    } else {
+	echo $dni_tygodnia[$input-1], "<br>"; 
+}
+?>
+
+</body>
+</html>

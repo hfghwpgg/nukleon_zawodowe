@@ -1,0 +1,10 @@
+SELECT COUNT(Id_pracownika) FROM `pracownicy` WHERE 1
+SELECT AVG(wynagrodzenie) FROM `pracownicy` WHERE 1
+SELECT COUNT(Id_pracownika) FROM `pracownicy` WHERE Id_stanowisko = 1;
+SELECT COUNT(Id_pracownika) FROM `pracownicy` WHERE Miasto LIKE "Lublin";
+SELECT imie, Nazwisko FROM `pracownicy` ORDER BY wynagrodzenie DESC LIMIT 1;
+SELECT imie, Nazwisko FROM `pracownicy` ORDER BY wynagrodzenie LIMIT 1
+SELECT COUNT(Id_pracownika) FROM `pracownicy` WHERE wynagrodzenie > 2000;
+SELECT COUNT(Objetosc_ks) FROM `ksiazki` WHERE Objetosc_ks > 300;
+SELECT AVG(Objetosc_ks) FROM `ksiazki` WHERE 1;
+SELECT AVG(cena) FROM `ksiazki` WHERE Id_dzial = 1

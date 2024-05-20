@@ -1,0 +1,24 @@
+proste
+1. SELECT imie, nazwisko FROM `student` WHERE id_student=8;
+2. SELECT imie, nazwisko FROM `student` WHERE wojewodztwo LIKE "małopolskie";
+3. SELECT * FROM `student` WHERE rok_studiów = 1;
+4. SELECT * FROM `student` ORDER BY nazwisko ASC;
+5. SELECT imie, nazwisko, miejscowosc FROM `student` WHERE wojewodztwo LIKE "małopolskie";
+6. SELECT id_student, imie, nazwisko FROM `student` WHERE rok_urodzenia BETWEEN 1997 AND 1999;
+7. SELECT nazwisko FROM `student` ORDER BY rok_urodzenia DESC LIMIT 1;
+zlozone
+1. SELECT s.imie, s.nazwisko FROM `student` AS s, `wydzial` AS w WHERE w.nazwa LIKE "Wydział Zarządzania" AND w.id_wydzial = s.id_wydzial;
+2. SELECT s.imie, s.nazwisko, s.miejscowosc FROM `student` AS s, `wydzial` AS w WHERE w.nazwa LIKE "Wydział Fizyki i Informatyki Stosowanej" AND w.id_wydzial = s.id_wydzial;
+3. SELECT k.nazwa FROM `kierunek` AS k, `wydzial` AS w WHERE k.id_wydzial = w.id_wydzial AND w.nazwa LIKE "Wydział Informatyki";
+
+pytania
+1. Select słuzy do wybrania danych z tabeli i wyświetlenia ich
+2. aby posortowac rosnąco po kolumnie uzywamy "ORDER BY (nazwa tabeli) ASC"
+3. klauzula LIKE oznacza "jak... " i sluzy do porownania komorki z tekstem (nazwa LIKE "nazwa")
+4. BETWEEN sluzy do wybrania przedzialu od do 
+5. LIMIT 1 pokazuje tylko pierwszy wynik zapytania
+6. po FROM trzeba dac wiele nazw tabel po przecinku
+7. GROUP BY grupuje wyniki 
+8. ??
+9. DISTINCT wyświetla unikalne wyniki bez powtorzen, np gdy wyswietla sie wszystkie osoby projektu a 1 osoba ma wiele ról w projekcie
+10. Aliasty to alternatywne nazwy dla tabel sluzace do uproszczenia pisowni w zapytaniu sql

@@ -1,0 +1,10 @@
+1. SELECT imie, nazwisko FROM kierowcy WHERE id_pojazdu IS NOT NULL
+2. SELECT * FROM kierowcy WHERE 1 ORDER BY nazwisko ASC, imie ASC
+3. SELECT DISTINCT marka FROM pojazdy WHERE 1
+4. SELECT DISTINCT miejscowosc FROM kierowcy WHERE 1
+5. DELETE FROM kierowcy WHERE `miejscowosc` LIKE "Garwolin"
+6. UPDATE kierowcy SET nazwisko = "Kadłubek", adres = "Wyszynskiego 1", miejscowosc = "Karczew" WHERE imie LIKE "Bartosz"
+7. SELECT k.imie, k.nazwisko, p.marka, p.model, p.rejestracja FROM kierowcy AS k INNER JOIN pojazdy AS p ON p.id_pojazdu = k.id_pojazdu
+8. SELECT p.*, k.imie, k.nazwisko FROM kierowcy AS k INNER JOIN pojazdy AS p ON p.id_pojazdu = k.id_pojazdu
+9. SELECT k.*, p.* FROM kierowcy AS k INNER JOIN pojazdy AS p ON p.id_pojazdu = k.id_pojazdu WHERE k.id_pojazdu IS NOT NULL
+10. SELECT w.id_wypozyczono, s.imie, s.nazwisko, k.tytul, w.data_wyp FROM wypozyczono AS w INNER JOIN student AS s INNER JOIN ksiazki AS k ON k.id_ksiazki = w.id_ksiazki AND s.id_student = w.id_student

@@ -1,0 +1,11 @@
+
+a) Pobieranie danych, przetwarzanie i zwracanie ich, zapisywanie w bazie danych i odczytywanie ich z bazy danych.
+b) Konieczne jest posiadanie serwera WWW, serwera MySQL i PHP.
+c) xampp, wampserwer, mamp
+d) 000webhost.com, ovh.org i dhosting.pl. infinityfree.net, awardspace.com
+e) Narzędzie służące do zarządzania serwerem MySQL,  https://www.phpmyadmin.net/
+f) python - python.org
+ruby - ruby-lang.org
+js - developer.mozilla.org/en-US/docs/Web/JavaScript
+g) Do obsługi bazy danych MySQL i serwera WWW Apache.
+h) Wysiwyg to narzędzie umożliwiające tworzenie stron internetowych bez konieczności pisania kodu. Przykładowe narzędzia to WordPress (pl.wordpress.org/), Adobe Dreamwaver (https://www.adobe.com/pl/products/dreamweaver.html) oraz Microsoft FrontPage (https://en.wikipedia.org/wiki/Microsoft_FrontPage).

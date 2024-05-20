@@ -1,0 +1,12 @@
+1. CREATE TABLE Artykuly( Id_artykulu INT, Grupa VARCHAR(20), Nazwa_artykulu VARCHAR(100), ilosc INT, Cena FLOAT, PRIMARY KEY (Id_artykulu))
+2. DROP TABLE artykuly
+3. ALTER TABLE artykuly ADD (magazyn VARCHAR(100) DEFAULT "magazyn1")
+4. DELETE FROM artykuly WHERE Cena <100
+5. INSERT INTO artykuly (Id_artykulu, Grupa, ilosc, Cena) VALUES (6, "drukarka", 5, 230)
+6. SELECT Nazwa_artykulu FROM artykuly WHERE Grupa LIKE "Grupa1" ORDER BY Grupa ASC
+7. SELECT SUM(Cena) FROM `artykuly` WHERE Grupa LIKE "Grupa2"
+8. SELECT Nazwa_artykulu FROM artykuly WHERE Cena > 300
+9. SELECT SUM(Cena) FROM `artykuly` WHERE Grupa LIKE "Grupa1"
+10. SELECT Nazwa_artykulu FROM `artykuly` WHERE Nazwa_artykulu LIKE "k%"
+11. UPDATE artykuly SET ilosc = ilosc*2 WHERE Grupa LIKE "Grupa1"
+12. SELECT Nazwa_artykuliu, Cena IF(Grupa LIKE "Grupa1", 1.23, 1.08) AS "Cena z VAT" FROM artykuly

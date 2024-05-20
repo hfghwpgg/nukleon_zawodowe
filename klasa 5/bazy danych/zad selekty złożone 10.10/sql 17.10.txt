@@ -1,0 +1,10 @@
+SELECT imie, nazwisko FROM `klienci` WHERE idklienta = 4;
+SELECT * FROM `auta` WHERE rocznik = 2010;
+SELECT * FROM `auta` WHERE marka LIKE "Ford" ;
+SELECT * FROM `auta` WHERE idauta BETWEEN 2 AND 4;
+SELECT imie, nazwisko FROM `klienci` WHERE adres LIKE "Rolna%" AND miasto LIKE "Katowice" ;
+SELECT marka, model FROM `auta` ORDER BY ubezpieczenie DESC LIMIT 1 ;
+SELECT auta.idauta, auta.marka, auta.model FROM `wypozyczenia`, `auta` WHERE auta.idauta = wypozyczenia.idauta ORDER BY wypozyczenia.datawyp ASC LIMIT 1;
+SELECT klienci.imie, klienci.nazwisko FROM `wypozyczenia`, `klienci` WHERE klienci.idklienta = wypozyczenia.idklienta AND idauta = 1;
+SELECT auta.marka, auta.model FROM `wypozyczenia`, `auta` WHERE auta.idauta = wypozyczenia.idauta AND wypozyczenia.idklienta = 4;
+SELECT auta.marka, auta.model FROM `wypozyczenia`, `auta`, `klienci` WHERE auta.idauta = wypozyczenia.idauta AND klienci.idklienta = wypozyczenia.idklienta AND klienci.nazwisko LIKE "Pastewniak"; 

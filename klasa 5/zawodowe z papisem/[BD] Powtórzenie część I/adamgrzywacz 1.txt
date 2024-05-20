@@ -1,0 +1,16 @@
+1. baza danych to uporządkowany zbior danych
+2. program do obslugi bazami danych np akces
+3. tabela to podstawowy objekt bazy danych w ktorym sa wszystkie informacje
+4. rekord to jeden wiersz tabeli, wiec jeden objekt tabeli
+5. pole to pojedyncza dana rekordu
+6. klucz glowny to unikalne pole definiujące rekord w tabeli
+7. klucz obcy to klucz glowny z innej tabeli
+8. zapytanie to operacja szukania danych w bazie
+9. Normalizacja – proces uporządkowania danych w bazie 
+10. transakcja jest sekwencją logicznie powiązanych operacji na bazie danych
+11. indexowanie to proces ktory przyspiesza szukanie daynch w bazie za pomoca cache'owania
+12. widok to tabela wirtualna
+13. ACID (Atomicity, Consistency, Isolation, Durability), CRUD to zasady tworzenia dobrych baz danych
+14. Relacyjna baza danych (Relational Database) - baza danych w ktorej tabele sa polaczone relacjami
+15. NoSQL to nierelacyjna baza danych
+16. Encja to reprezentacja obiektu za pomoca atrybutow
